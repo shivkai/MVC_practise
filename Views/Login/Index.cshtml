@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+@{
+    <div class="w-100  vh-100 d-flex flex-column justify-content-center overflow-hidden align-items-center align-content-center   bg-light ">
+        <div class="container  d-flex align-items-center justify-content-end  ">
+            <form class="w-75" enctype="multipart/form-data" asp-controller="Login" asp-action="Index">
+        <div class="mb-3 row">
+            <label for="email" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-6">
+               <input type="text" class="form-control " name="email" id="email" placeholder="email@example.com" required>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="password" class="col-sm-2 mr-2 col-form-label">Password</label>
+            <div class="col-sm-6">
+                        <input type="password" name="password" class="form-control " id="password" required>
+            </div>
+        </div>
+        <div class="">
+            <button type="submit" class="btn btn-success  my-2 " >Sign In</button>
+            <a href = "/" class="text-decoration-underline text-primary ">Go back to homepage</a>
+        </div>
+    </form>
+        </div>
+        <div class="">
+    <h4 class="text-danger">@ViewBag.message</h4>
+        </div>
+     
+    </div>
+}

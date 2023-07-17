@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+@{
+    <div class="w-100 vh-100 bg-light" >
+        <div class="container h-100 d-flex flex-column justify-content-center align-items-center">
+            <h2>Welcome to the Main Page</h2>
+            <form enctype="multipart/form-data" asp-controller="Main" asp-action="Logout">
+            <button class="btn btn-outline-danger"  type="submit">Sign out</button>
+            </form>
+        </div>
+    
+    </div>
+}

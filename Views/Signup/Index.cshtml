@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Sign Up";
+}
+@{
+   
+<div class="w-100  vh-100 d-flex justify-content-center flex-column  bg-light ">
+        <div class="container  d-flex align-items-center justify-content-end  ">
+            <form class="w-75" enctype="multipart/form-data" asp-controller="Signup" asp-action="Index">
+                <div class="mb-3 row">
+                    <label for="firstname" class="col-sm-2 col-form-label">Firstname</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="firstname" class="form-control" id="firstname" placeholder="John" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="lastname" class="col-sm-2 col-form-label">Lastname</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="lastname" class="form-control " id="lastname" placeholder="Doe" required>
+                    </div>
+                </div><div class="mb-3 row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="email" class="form-control " id="email" placeholder="email@example.com" required>
+                    </div>
+                </div>
+                <div class="mb-3 row">
+                    <label for="password" class="col-sm-2 mr-2 col-form-label">Password</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="password" class="form-control " id="password" required>
+                    </div>
+                </div>
+                <div class="">
+                    <button class="btn btn-primary  my-2 " type="submit">Sign Up</button>
+                    <a href="/" class="text-decoration-underline text-primary ">Go back to homepage</a>
+                </div>
+            </form>
+
+        </div>
+        <div class="text-center">
+            <h3 class=@(ViewBag.message!=null && ViewBag.success?"text-success":"text-danger")>@ViewBag.message</h3>
+        </div>
+    </div>
+}
