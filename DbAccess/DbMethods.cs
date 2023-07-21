@@ -4,7 +4,7 @@ using WebApplication1.Models;
 namespace WebApplication1.DbAccess;
     public class DbMethods
     {
-       private const string connectionUri = "mongodb+srv://admin:root@practise.kxdj03i.mongodb.net/?retryWrites=true&w=majority";
+       private const string connectionUri = "mongodb+srv://***:***@practise.kxdj03i.mongodb.net/?retryWrites=true&w=majority";
        private const string dbName = "UserData";
        private const string userCollection = "Users";
 
